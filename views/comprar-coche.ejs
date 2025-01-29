@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprar coche</title>
+  </head>
+  <body>
+    <h1>Comprar coche</h1>
+    <p>Bienvenido <%= user %>. Selecciona que coche quieres comprar</p>
+    <ul>
+      <% for(let coche of coches) { %>
+      <li><%= coche.marca %> <%= coche.MODELO %> - <%= coche.MATRICULA %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
