@@ -21,8 +21,6 @@ async function initDb() {
         MATRICULA TEXT
     )
     `);
-
-  console.log("db initialized");
 }
 
 module.exports = {

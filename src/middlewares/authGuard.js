@@ -1,6 +1,6 @@
-const jwt = require("jsonwebtoken");
+const jwtUtils = require("../utils/jwtUtils");
 
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
   const token = req.cookies.jwt;
 
   if (!token) {
@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     return;
   }
 
-  jwt.verify(token, "supersecreto", (err, payload) => {
+  jwtUtils.verifyToken(token, (err, payload) => {
     if (err) {
       res
         .status(401)

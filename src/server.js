@@ -89,4 +89,5 @@ function startServer() {
 
 module.exports = {
   startServer,
+  app
 };
